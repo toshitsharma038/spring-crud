@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>I am updating value</title>
+</head>
+<body>
+<h1>Edit Value</h1>
+
+<form action="#" th:action="@{/update/{id}(id=${stuobj.id})}" th:object="${stuobj}" method="post">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    <label for="marks">Marks</label>
+    <input type="text" th:field="*{marks}" id="marks" placeholder="marks">
+    <span th:if="${#fields.hasErrors('marks')}" th:errors="*{marks}"></span>
+    <input type="submit" value="Update student Data">
+</form>
+
+</body>
+</html>

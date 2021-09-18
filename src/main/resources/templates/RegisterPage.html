@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RegisterPage</title>
+</head>
+<body>
+<h1>I am register Page</h1>
+<form th:action="@{/listpage}" th:object="${stu}" method="post">
+    Name: <input type="text" name="name"><br>
+    Marks: <input type="text" name="marks"><br>
+    <button type="submit">Add Data to database</button>
+
+</form>
+</body>
+</html>
